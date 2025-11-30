@@ -1,0 +1,138 @@
+/* === GLOBAL BACKGROUND === */
+body {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* === PAGE CONTAINER === */
+.main-container {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+/* === CARDS === */
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+/* === UPLOAD SECTION === */
+.upload-section {
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.upload-btn {
+  background: #ff4b2b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-btn:hover {
+  background: #ff1e00;
+}
+
+/* === VISUALIZATION BUTTONS === */
+.viz-btn {
+  background: #222;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.viz-btn:hover {
+  background: #444;
+}
+/* ==== INTERACTIVE CHURN PREDICTION BUTTON ==== */
+.predict-btn {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Smooth animations */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover glow + scale */
+.predict-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0px 8px 18px rgba(255, 80, 120, 0.6);
+}
+
+/* Ripple Effect */
+.predict-btn::after {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 0px;
+  height: 0px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s linear forwards;
+}
+
+/* Keyframes for ripple */
+@keyframes ripple {
+  to {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+.viz-btn {
+  background: #4a4a4a;
+  color: white;
+  padding: 12px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.viz-btn:hover {
+  background: #222;
+  transform: scale(1.05);
+}
+
+.viz-btn:active {
+  transform: scale(0.95);
+}
+.classification-report {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
